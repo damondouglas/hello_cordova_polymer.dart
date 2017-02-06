@@ -1,0 +1,46 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout_classes.html">
+</head>
+
+<dom-module id="x-placeholder">
+  <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+      .container {
+        position: absolute;
+        z-index: -100;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .glass {
+        position: absolute;
+        z-index: -99;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-color: white;
+      }
+
+      #placeholder {
+        width: 100%;
+      }
+
+      .hide {
+        display: none;
+      }
+
+    </style>
+    <div id="blinds">
+      <div class="container layout horizontal center-justified">
+        <img id="placeholder">
+      </div>
+      <div class="glass"></div>
+    </div>
+  </template>
+</dom-module>

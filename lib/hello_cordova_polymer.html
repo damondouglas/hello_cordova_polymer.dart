@@ -1,0 +1,25 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+  <link rel="import" href="search.html">
+  <link rel="import" href="list.html">
+  <link rel="import" href="progress.html">
+  <link rel="import" href="placeholder.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout_classes.html">
+</head>
+
+<dom-module id="hello-cordova">
+  <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+      .hide {
+        display: none;
+      }
+    </style>
+    <div class="container">
+      <x-search id="search"></x-search>
+      <x-list id="list"></x-list>
+      <x-progress id="progress"></x-progress>
+      <x-placeholder id="placeholder"></x-placeholder>
+    </div>
+  </template>
+</dom-module>

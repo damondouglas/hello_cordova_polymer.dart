@@ -1,0 +1,28 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+  <link rel="import" href="../../packages/polyer_elements/paper_spinner.html">
+</head>
+
+<dom-module id="x-progress">
+  <template>
+    <style>
+      :root {
+      }
+      .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+      }
+
+    </style>
+    <div class="container">
+      <paper-spinner id="progress"></paper-spinner>
+    </div>
+  </template>
+</dom-module>

@@ -1,0 +1,41 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+  <link rel="import" href="../../packages/polymer_elements/paper_card.html">
+  <link rel="import" href="../../packages/polymer_elements/paper_fab.html">
+  <link rel="import" href="../../packages/polymer_elements/social_icons.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout_classes.html">
+</head>
+
+<dom-module id="x-list">
+  <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+      paper-fab {
+        background-color: #c2c2c2;
+      }
+      paper-card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      paper-card img {
+        min-width: 300px;
+        width: 300px;
+      }
+    </style>
+    <div class="layout vertical">
+      <template is="dom-repeat" items="{{results}}">
+        <div class="layout horizontal center-justified">
+          <paper-card>
+            <div class="card-content">
+              <img src="{{item.imageUrl}}">
+            </div>
+            <div class="card-actions">
+              <paper-fab mini icon="social:share"></paper-fab>
+
+            </div>
+          </paper-card>
+        </div>
+      </template>
+    </div>
+  </template>
+</dom-module>

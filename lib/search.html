@@ -1,0 +1,39 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+  <link rel="import" href="../../packages/polymer_elements/paper-input.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_flex_layout_classes.html">
+  <link rel="import" href="../../packages/polymer_elements/iron_icons.html">
+</head>
+
+<dom-module id="x-search">
+  <template>
+    <style is="custom-style" include="iron-flex iron-flex-alignment">
+      :root {
+      }
+
+      .container {
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 5px;
+      }
+
+      #search {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      paper-input {
+        margin-top: -10px;
+        margin-bottom: 10px;
+
+      }
+
+    </style>
+    <div class="container layout horizontal center-justified">
+      <paper-input id="search" on-input="onSearchChange">
+        <iron-icon icon="search" prefix></iron-icon>
+      </paper-input>
+    </div>
+  </template>
+</dom-module>
